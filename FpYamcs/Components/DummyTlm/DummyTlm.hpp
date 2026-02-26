@@ -36,7 +36,20 @@ class DummyTlm final : public DummyTlmComponentBase {
                      U32 context           //!< The call order
                      ) override;
 
-    U64 m_counter = 0x0;  //!< example counter
+  private:
+    // ----------------------------------------------------------------------
+    // Handler implementations for commands
+    // ----------------------------------------------------------------------
+
+    //! Handler implementation for command DUMMY_COMMAND
+    //!
+    //! Example command
+    void DUMMY_COMMAND_cmdHandler(FwOpcodeType opCode,  //!< The opcode
+                                  U32 cmdSeq            //!< The command sequence number
+                                  ) override;
+
+    U64 m_counter = 0x0;      //!< example counter to send as telemetry
+    MyStruct m_sampleStruct;  //!< example struct to send as telemetry
 };
 
 }  // namespace FpYamcs

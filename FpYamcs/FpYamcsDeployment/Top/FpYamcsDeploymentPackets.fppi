@@ -2,6 +2,7 @@ telemetry packets FpYamcsDeploymentPackets {
 
   packet DummyTlm id 8 group 1 {
     FpYamcs.dummyTlm.DummyCounter
+    FpYamcs.dummyTlm.DummyStruct
   }
 
 } omit {
