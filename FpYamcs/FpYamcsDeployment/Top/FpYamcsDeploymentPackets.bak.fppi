@@ -1,5 +1,11 @@
 telemetry packets FpYamcsDeploymentPackets {
 
+  packet DummyTlm id 44 group 1 {
+    FpYamcs.dummyTlm.DummyCounter
+    FpYamcs.dummyTlm.DummyStruct
+  }
+
+
   packet CDH id 1 group 1 {
     CdhCore.cmdDisp.CommandsDispatched
     CdhCore.cmdDisp.CommandsDropped
